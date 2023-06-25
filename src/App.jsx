@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import AddCreator from './pages/AddCreator';
+import EditCreator from './pages/EditCreator';
+import ShowCreators from './pages/ShowCreators';
+import ViewCreator from './pages/ViewCreator';
+import { FiHome } from 'react-icons/fi';
+import '../src/styles/App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function scrollFunction() {
+  document.getElementById('content').scrollIntoView({ behavior: "smooth" });
 }
 
-export default App
+function scrollDown() {
+  document.getElementById('content').scrollIntoView({ behavior: "smooth" });
+}
+
+function App() {
+  return (
+    <div className='app-main'>
+      <Router>
+        <div className='header-mainpage'>
+          <nav>
+            <div className='nav-links'>
+              <div className='home-icon'>
+                <Link to="/" > <FiHome className='homeicon' /> </Link>
+              </div>
+              <h1>Creatorverse</h1>
+              <div className='spacer'></div>
+            </div>
+          </nav>
+        </div>
+
+
+        <div className='header-content'>
+          <div className='header-left'>
+            <div className='add_buttons'>
+              <Link to="/" onClick={scrollFunction}>Show Creators</Link>
+            </div>
+          </div>
+          <div className='header-middle'>
+            <h3>Share, explore, and connect.</h3>
+            <p>A platform for creators to showcase their work, where users can discover and engage with captivating creations with a simple click.</p>
+          </div>
+          <div className='header-right'>
+            <div className='add_buttons'>
+              <Link to="/add" onClick={scrollDown}>Add Creator</Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="content" id='content'>
+          <Routes>
+            <Route path="/" element={<ShowCreators />} />
+            <Route path="/add" element={<AddCreator />} />
+            <Route path="/edit/:id" element={<EditCreator />} />
+            <Route path="/:id" element={<ViewCreator />} />
+            <Route path="/creators" element={<ShowCreators />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
+  );
+}
+
+
+export default App;
