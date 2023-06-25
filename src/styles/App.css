@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.header-mainpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  color: white;
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.home-icon {
+  padding-right: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(126, 36, 36);
+  margin-left: 20px;
+  border: 2px solid black;
+}
+
+.add_buttons {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.add_buttons a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  border: 2px solid white;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.add_buttons a:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.homeicon {
+  color: rgb(52, 225, 49);
+  font-size: 30px;
+}
+
+.homeicon:hover {
+  color: rgb(147, 26, 58);
+  transition: 0.3s;
+}
+
+.nav-links h1 {
+  margin: 0 auto;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.header-content {
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  background-color: #0e261e;
+}
+
+.header-left,
+.header-middle,
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(206, 206, 206);
+  font-size: 1.7rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header-left {
+  justify-content: flex-start;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.header-middle h3 {
+  font-size: 1.9rem;
+  padding: 8px;
+  text-align: center;
+}
+
+.header-middle p {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
