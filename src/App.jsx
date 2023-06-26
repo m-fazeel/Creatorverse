@@ -39,8 +39,8 @@ function App() {
             </div>
           </div>
           <div className='header-middle'>
-            <h3>Share, explore, and connect.</h3>
-            <p>A platform for creators to showcase their work, where users can discover and engage with captivating creations with a simple click.</p>
+            <h3>Share, explore, and connect</h3>
+            <p>A platform dedicated to highlighting top content creators, where users can explore and connect with mesmerizing creations effortlessly</p>
           </div>
           <div className='header-right'>
             <div className='add_buttons'>
