@@ -4,7 +4,7 @@ Submitted by: **👉🏿Mujaddad Fazeel**
 
 About this web app: **👉🏿 Platform to display top content creators**
 
-Time spent: **👉🏿 40** hours
+Time spent: **👉🏿 45** hours
 
 ## Required Features
 
@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='./creator_gif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 GIF tool here
