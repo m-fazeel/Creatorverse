@@ -8,10 +8,17 @@ function EditCreator() {
   const { id } = useParams();
   const [creator, setCreator] = useState(null);
   const navigate = useNavigate();
+  const ceratorContainerRef = React.useRef(null);
 
   useEffect(() => {
     fetchCreator();
   }, [id]);
+
+  useEffect(() => {
+    if (ceratorContainerRef.current) {
+      ceratorContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [creator]);
 
   async function fetchCreator() {
     try {
@@ -61,8 +68,7 @@ function EditCreator() {
     <>
       <h2>Editing "{creator.name}"</h2>
 
-      <form onSubmit={handleSubmit} className='form-info'>
-
+      <form onSubmit={handleSubmit} className='form-info' ref={ceratorContainerRef}>
 
         <h3>Name</h3>
         <input type="text" value={creator.name} onChange={(e) => setCreator({ ...creator, name: e.target.value })} required />
